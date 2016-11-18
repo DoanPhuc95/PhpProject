@@ -412,7 +412,7 @@ div.success  {
     font-size: 18px;
 }
 .formInfo #titleform{
-    float: right;
+    text-align: right;
 }
 .formInfo input[type=submit]{
     width: 200px;
@@ -421,5 +421,17 @@ div.success  {
     border-radius: 10px;
     color: #c6c6c6;
     background: #4294DE;
+}
+.formInfo input{
+    width: 410px;
+}
+.formInfo input[type=text]{
+    width: 405px;
+}
+.formInfo select{
+    width: 415px;
+}
+.formInfo select option{
+    text-align: center;
 }
 

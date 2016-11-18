@@ -2,7 +2,7 @@
 
 <div class = "group-box">
     <div align="center"> 
-        <div class="title">THÊM SINH VIÊN</div>
+        <div class="title">SỬA THÔNG TIN SINH VIÊN</div>
         <div class="group-box-content">
             <form>
                 <table class="formInfo"">
@@ -48,7 +48,7 @@
                     <tr></tr>
                     <tr>
                         <th></th>
-                        <th><input type="submit" value="Thêm sinh viên"/></th>
+                        <th><input type="submit" value="Sửa thông tin"/></th>
                     </tr>
                 </table>
             </form>
@@ -56,3 +56,4 @@
     </div>
 </div>
 <?php require "../footer.php"?>
+

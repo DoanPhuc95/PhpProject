@@ -4,9 +4,9 @@
             <div class="title">Sinh Viên</div>  
             <div class="group-box-content">
                 <ul>								
-                    <li> <a href="admin/addnewStudent.php.php">Thêm sinh viên</a> </li>
-                    <li> <a href="sinhvien.php">Sửa thông tin sinh viên</a> </li>
-                    <li> <a href="#">Cấp lại mật khẩu sinh viên</a> </li>
+                    <li> <a href="admin/addnewStudent.php">Thêm sinh viên</a> </li>
+                    <li> <a href="admin/changeInfoStudent.php">Sửa thông tin sinh viên</a> </li>
+                    <li> <a href="admin/changePasswordStudent">Cấp lại mật khẩu sinh viên</a> </li>
                     <li> <a href="#">Ngành Đào Tạo</a> </li>
                 </ul>						
             </div>						
