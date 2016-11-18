@@ -16,14 +16,13 @@
 	<meta charset="utf-8"> 
 	<meta name="keywords" content="<?php echo $page_keywords; ?>" />
 	<meta name="description" content="<?php echo $page_description; ?>" />
-        <link rel="stylesheet" type="text/css" href="<?php $_SERVER['DOCUMENT_ROOT'];?>/PhpProject/css/style.css" />	
-	<link rel="shortcut icon" href="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/favicon.ico" type="image/x-icon" />
-        <script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/js/jquery.js"></script>
-        <script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/js/script.js"></script>
-        <script type="text/javascript" src="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/js/jquery-ui-1.10.2.custom.js"></script>
-        <link rel="stylesheet" 	href="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/css/ui-lightness/jquery-ui-1.10.2.custom.css" />
-        <link rel="stylesheet" 	href="<?php $_SERVER['DOCUMENT_ROOT']?>/PhpProject/css/jmetro/jquery-ui-1.10.2.custom.css" /> 
-        
+        <link rel="stylesheet" type="text/css" href="<?php ROOT_DIR;?>/PhpProject/css/style.css" />	
+	<link rel="shortcut icon" href="<?php ROOT_DIR;?>/PhpProject/favicon.ico" type="image/x-icon" />
+        <script type="text/javascript" src="<?php ROOT_DIR;?>/PhpProject/js/jquery.js"></script>
+        <script type="text/javascript" src="<?php ROOT_DIR;?>/PhpProject/js/script.js"></script>
+        <script type="text/javascript" src="<?php ROOT_DIR;?>/PhpProject/js/jquery-ui-1.10.2.custom.js"></script>
+        <link rel="stylesheet" 	href="<?php ROOT_DIR;?>/PhpProject/css/ui-lightness/jquery-ui-1.10.2.custom.css" />
+        <link rel="stylesheet" 	href="<?php ROOT_DIR;?>/PhpProject/css/jmetro/jquery-ui-1.10.2.custom.css" /> 
 </head>
 <body>
     <div id="pageWrapper">

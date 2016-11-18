@@ -4,12 +4,16 @@
 
 <div class = "group-box">
     <div align="center"> 
-        <div class="title">CẤP NHẬT ĐIỂM CHO LỚP HỌC</div>
+        <div class="title">CẤP NHẬT ĐIỂM CHO SINH VIÊN</div>
         <div class="group-box-content">
             <form>
                 <table class="formInfo">
                     <tr>
-                        <th id="titleform">Tìm kiếm theo mã lớp:</th>
+                        <th id="titleform">Mã sinh viên:</th>
+                        <th><input type="text"/></th>
+                    </tr>
+                    <tr>
+                        <th id="titleform">Mã lớp:</th>
                         <th><input type="text"/></th>
                     </tr>
                     <tr></tr>

@@ -12,7 +12,7 @@ $page_description = 'Hệ thống Quản lý đào tạo - Trường Đại Họ
 require_once("C:/xampp/htdocs/PhpProject/libs/db.php"); 
 require_once("C:/xampp/htdocs/PhpProject/libs/common.php"); 
 
-define('ROOT_DIR', "");
+define('ROOT_DIR','');
  
 define ("IMAGES_DIR", ROOT_DIR."images" );
 define ("LIBS_DIR", ROOT_DIR."libs");
