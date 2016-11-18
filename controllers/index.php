@@ -9,4 +9,5 @@ class Index extends Controller
     echo 'Hello World from index controller';
   }
 }
+
 ?>
