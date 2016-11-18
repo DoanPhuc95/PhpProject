@@ -1,4 +1,7 @@
-<?php require "header.php"; ?>
+<?php $_path = $_SERVER['DOCUMENT_ROOT']; 
+    $_path .='/PhpProject/header.php';
+    require $_path;
+?>
 
 <div class="group-box">
 	<div align="center">
