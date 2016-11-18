@@ -1,12 +1,34 @@
 <?php
-$token = explode('/',rtrim($_SERVER['REQUEST_URI'],'/'));
-echo '<pre>';
-print_r($_SERVER);
-print_r($token);
-echo '</pre>';
+error_reporting(E_ALL);
+ini_set('display_errors',1);
 
-$controllerName = ucfirst($token[2]);
+$GLOBALS['config'] = array(
+  'domain' => ' ',
 
-require_once('controllers/'.$controllerName);
-$controller = new $controllerName;
+  'path'   => array(
+    'app'  => 'app/',
+    'core' => 'core/',
+    'index'=> 'index.php'
+  ),
+
+  'defaults' => array(
+    'controller' => 'main',
+    'method'     => 'index'
+  ),
+
+  'routes' => array(
+      // Each route contains 'url', 'controller', 'method'
+  ),
+
+  'database' => array(
+    'host'     => 'localhost',
+    'username' => '',
+    'password' => '',
+    'name'     => ''
+  )
+);
+
+require_once $GLOBALS['config']['path']['core'] . 'autoload.php';
+
+new Router();
 ?>
