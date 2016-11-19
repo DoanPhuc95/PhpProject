@@ -3,12 +3,16 @@ error_reporting(E_ALL);
 ini_set('display_errors',1);
 
 $GLOBALS['config'] = array(
-  'domain' => ' ',
+  'appname'=> 'TheGreatSIS',
+  'version'=> '0.0.1',
+  'domain' => '127.0.0.1',
 
   'path'   => array(
     'app'  => 'app/',
     'core' => 'core/',
-    'index'=> 'index.php'
+    'session' => 'app/sessions/',
+    'basepath' => 'C:/xampp/htdocs/PhpProject',
+    'index' => 'index.php'
   ),
 
   'defaults' => array(
@@ -21,13 +25,15 @@ $GLOBALS['config'] = array(
   ),
 
   'database' => array(
-    'host'     => 'localhost',
-    'username' => '',
+    'host'     => '127.0.0.1',
+    'username' => 'root',
     'password' => '',
-    'name'     => ''
+    'name'     => 'thegreatsis'
   )
 );
 
+date_default_timezone_set("Asia/Ho_Chi_Minh");
+$GLOBALS['instances'] = array();
 require_once $GLOBALS['config']['path']['core'] . 'autoload.php';
 
 new Router();

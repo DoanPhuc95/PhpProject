@@ -1,12 +1,10 @@
 <?php
- class Main extends Controller{
+ class Main extends Controller implements ControllerInterface{
 
    function index(){
-     echo "main index";
+     $data['text'] = "Hello Hung";
+     Load::view('main::index',$data);
    }
 
-   function foo(){
-     echo "main foo";
-   }
  }
  ?>
