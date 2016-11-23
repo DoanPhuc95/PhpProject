@@ -1,14 +1,16 @@
 <?php
  class Model{
 
-   public $model;
+   protected $database;
 
    function __construct(){
-     $this->model = new Database();
-     $this->model->connect($GLOBALS['config']['database']['host'],
+     $this->database = new Database();
+     $this->database->connect($GLOBALS['config']['database']['host'],
                                  $GLOBALS['config']['database']['username'],
                                  $GLOBALS['config']['database']['password'],
                                  $GLOBALS['config']['database']['name']);
    }
+
+  //  private function 
  }
  ?>

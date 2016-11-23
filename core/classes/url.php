@@ -3,6 +3,9 @@ class Url{
   static function part($number){
     $uri = explode('?',$_SERVER['REQUEST_URI']);
     $parts = explode('/', $uri[0]);
+    if($parts[1] == $GLOBALS['config']['path']['index']){
+      $number++;
+    }
     return isset($parts[$number]) ? $parts[$number] : false;
   }
 

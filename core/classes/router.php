@@ -10,9 +10,8 @@ class Router{
   function __construct(){
     $this->routes = $GLOBALS['config']['routes'];
     $route = $this->find_route();
-
     // print_r($route);
-
+    $route['controller'] .= 'Controller';
     if(class_exists($route['controller'])){
       $controller = new $route['controller'];
       if(method_exists($controller,$route['method'])){
@@ -37,18 +36,14 @@ class Router{
 
   // get the uri piece from uri( Eg: uri = /home/kitchen/fork   then uri(1) = 'kitchen')
   static function uri($part){
-    $parts = explode('/', $_SERVER['REQUEST_URI']);
-    // print_r($_SERVER['REQUEST_URI']);
-    if($parts[1] == $GLOBALS['config']['path']['index']){
-      $part++;
-    }
-
-    return (isset($parts[$part])) ? $parts[$part] : "";
+    return Url::part($part);
   }
 
 
   // Return
   private function find_route(){
+    $uri_1 = Router::uri(1);
+    $uri_2 = Router::uri(2);
     foreach ($this->routes as $route) {
       $parts = $this->route_part($route);
       $allMatch = true;
@@ -64,9 +59,6 @@ class Router{
         return $route;
       }
     }
-
-    $uri_1 = Router::uri(1);
-    $uri_2 = Router::uri(2);
 
     if($uri_1 == ""){
       $uri_1 = $GLOBALS['config']['defaults']['controller'];

@@ -10,18 +10,20 @@ $GLOBALS['config'] = array(
   'path'   => array(
     'app'  => 'app/',
     'core' => 'core/',
-    'session' => 'app/sessions/',
-    'basepath' => 'C:/xampp/htdocs/PhpProject',
+    'session' => 'app/sessions',
+    'basepath' => $_SERVER['DOCUMENT_ROOT'],
     'index' => 'index.php'
   ),
 
   'defaults' => array(
-    'controller' => 'main',
-    'method'     => 'index'
+    'controller' => 'staticpage',
+    'method'     => 'home'
   ),
 
   'routes' => array(
       // Each route contains 'url', 'controller', 'method'
+      'staticpage/home',
+      'session/new'
   ),
 
   'database' => array(
@@ -32,6 +34,9 @@ $GLOBALS['config'] = array(
   )
 );
 
+ini_set('session.save_handler', 'files');
+ini_set('session.save_path', $GLOBALS['config']['path']['basepath'] . "/" . $GLOBALS['config']['path']['session']);
+session_start();
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 $GLOBALS['instances'] = array();
 require_once $GLOBALS['config']['path']['core'] . 'autoload.php';

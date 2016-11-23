@@ -4,6 +4,8 @@ spl_autoload_register(function($class){
   $corePath = $GLOBALS['config']['path']['core'];
   $appPath = $GLOBALS['config']['path']['app'];
 
+  $instantiable = false;
+
   //Search in core path
   if(file_exists("{$corePath}abstracts/{$class}.php")){
     $instantiable = false;
@@ -16,9 +18,9 @@ spl_autoload_register(function($class){
     require_once "{$corePath}interfaces/{$class}.php";
 
     // And app path
-  }else if (file_exists("{$appPath}controllers/{$class}.php")) {
+  }else if (file_exists("{$appPath}controllers/".str_replace('Controller','_controller',$class).".php")) {
     $instantiable = true;
-    require_once "{$appPath}controllers/{$class}.php";
+    require_once "{$appPath}controllers/".str_replace('Controller','_controller',$class).".php";
   }else if (file_exists("{$appPath}libs/{$class}.php")) {
     $instantiable = true;
     require_once "{$appPath}libs/{$class}.php";

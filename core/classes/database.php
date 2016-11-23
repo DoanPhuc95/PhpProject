@@ -144,6 +144,10 @@ class Database{
     return $out;
   }
 
+  function close(){
+    $this->object->close();
+  }
+
 }
 
 ?>

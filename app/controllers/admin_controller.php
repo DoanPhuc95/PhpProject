@@ -1,5 +1,6 @@
 <?php
-   class Admin extends Controller{
+   class AdminController extends Controller{
+
      function index(){
        if(Common::is_logged_in()){
          Url::redir('/admin/home');

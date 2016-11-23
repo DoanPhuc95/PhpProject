@@ -1,12 +1,6 @@
 <?php
  class Session{
    function __construct(){
-     ini_set('session.save_handler', 'files');
-     ini_set('session.save_path', $GLOBALS['config']['path']['basepath'] . "/" . $GLOBALS['config']['path']['session']);
-     if(!isset($_SESSION)){
-       session_start();
-     }
-
      foreach ($_COOKIE as $key => $value) {
        if(!isset($_SESSION[$key])){
          json_decode($value);
