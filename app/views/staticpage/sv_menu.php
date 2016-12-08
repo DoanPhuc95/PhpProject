@@ -1,16 +1,14 @@
 <div id="contentWrapper" >
   <div id="leftSide" >
     <div class="group-box" id="danhmuc">
-      <div class="title">DANH MỤC</div>
+      <div class="title">Chuc nang</div>
       <div class="group-box-content">
         <ul>
-          <li> <a href="khoa.php"> Khoa - Viện</a> </li>
-          <li> <a href="giangvien.php">Giảng Viên</a> </li>
-          <li> <a href="sinhvien.php">Sinh Viên</a> </li>
-          <li> <a href="nganh.php">Ngành Đào Tạo</a> </li>
-          <li> <a href="lopchuyennganh.php">Lớp Chuyên Ngành</a> </li>
-          <li> <a href="lophocphan.php">Lớp Học Phần</a> </li>
-          <li> <a href="admin/monhoc.php">Môn Học</a> </li>
+          <li> <a href="student/changeInfo.php">Cap nhat thong tin</a> </li>
+          <li> <a href="student/changePassword.php">Doi mat khau</a> </li>
+          <li> <a href="student/dangkihocphan.php">Đăng kí học phần</a> </li>
+          <li> <a a href="student/dangkilop.php">Đăng kí lớp học</a></li>
+          <li> <a href="student/xemdiem.php">Bảng điểm cá nhân</a> </li>
         </ul>
       </div>
     </div>
